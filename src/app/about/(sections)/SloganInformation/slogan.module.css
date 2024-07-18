@@ -1,0 +1,23 @@
+.slogan__wrapper {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+.slogan__article {
+  width: 20%;
+}
+@media (max-width: 1024px) {
+  .slogan__article {
+    width: 30%;
+  }
+}
+@media (max-width: 800px) {
+  .slogan__wrapper {
+    flex-direction: column;
+    text-align: start;
+  }
+  .slogan__article {
+    width: auto;
+    margin-bottom: 16px;
+  }
+}

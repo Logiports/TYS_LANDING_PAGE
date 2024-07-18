@@ -1,0 +1,11 @@
+.wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+@media (max-width: 800px) {
+  .wrapper {
+    flex-direction: column;
+    text-align: start;
+  }
+}

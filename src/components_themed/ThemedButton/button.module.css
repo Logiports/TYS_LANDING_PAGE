@@ -1,0 +1,48 @@
+.button {
+  width: 188px;
+  height: 48px;
+  padding: 0 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  font-size: 16px;
+
+  cursor: pointer;
+  text-decoration: none;
+  transition: all ease-in-out 0.1s;
+}
+/* OUTLINED */
+.button__outlined--dark {
+  color: #3e3e3e;
+  border: 1px solid #3e3e3e;
+}
+.button__outlined--light {
+  color: white;
+  border: 1px solid white;
+}
+.button__outlined--primary {
+  color: #178842;
+  border: 1px solid #178842;
+}
+.button__outlined:hover {
+  border-width: 3px;
+}
+/* FILLED */
+.button__filled--dark {
+  color: white;
+  background-color: black;
+}
+.button__filled--light {
+  color: black;
+  background-color: white;
+}
+.button__filled--primary {
+  color: white;
+  background-color: #178842;
+}
+.button__filled:hover {
+  opacity: 0.7;
+}

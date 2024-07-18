@@ -1,0 +1,24 @@
+.card {
+  width: 27%;
+  height: 55vh;
+  position: relative;
+}
+.card__box {
+  bottom: 0;
+  padding: 32px 16px;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  background-color: hsla(143, 64%, 21%, 0.7);
+}
+@media (max-width: 1024px) {
+  .card {
+    width: 30%;
+  }
+}
+@media (max-width: 800px) {
+  .card {
+    width: auto;
+    margin: 8px 0;
+  }
+}

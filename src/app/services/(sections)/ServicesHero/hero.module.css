@@ -1,0 +1,13 @@
+.hero {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.hero__subtitle {
+  width: 80%;
+}
+@media (max-width: 800px) {
+  .hero__subtitle {
+    width: 100%;
+  }
+}
