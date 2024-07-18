@@ -1,11 +1,8 @@
 import classes from "./system.module.css";
 import { ThemedContainer, ThemedText, ThemedButton } from "@/components_themed";
+import { SystemsURLs } from "@/models";
 
 const SystemLinks = () => {
-  const URLs = {
-    PROVEEDORES: "http://tys.yavuerp.com.ar:10000/jcnt/portal/frontend/",
-    CLIENTES: "http://logistica.terminalesyservicios.com.ar",
-  };
   return (
     <ThemedContainer
       element="section"
@@ -26,10 +23,14 @@ const SystemLinks = () => {
         marginTop={"xs"}
         className={classes.buttons}
       >
-        <ThemedButton href={URLs.CLIENTES} theme="light" target="_blank">
+        <ThemedButton href={SystemsURLs.CLIENTES} theme="light" target="_blank">
           Clientes
         </ThemedButton>
-        <ThemedButton href={URLs.PROVEEDORES} theme="light" target="_blank">
+        <ThemedButton
+          href={SystemsURLs.PROVEEDORES}
+          theme="light"
+          target="_blank"
+        >
           Proveedores
         </ThemedButton>
       </ThemedContainer>
