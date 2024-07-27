@@ -10,6 +10,7 @@ import image_0009 from "@/images/servicios/0009.webp";
 import image_0010 from "@/images/servicios/0010.webp";
 import image_0011 from "@/images/servicios/0011.webp";
 import image_0012 from "@/images/servicios/0012.webp";
+import image_0013 from "@/images/servicios/0013.webp";
 import not_image from "@/images/empresa/not-image.webp";
 
 import { BannerItem, SimpleCardContainer, SimpleCard } from "@/components";
@@ -114,7 +115,7 @@ const ServicesList = () => {
           </ThemedText>
         </BannerItem>
         <BannerItem
-          image={not_image}
+          image={image_0013}
           alt="ALMACENAJE DE GRANELES LÍQUIDOS"
           invert
         >

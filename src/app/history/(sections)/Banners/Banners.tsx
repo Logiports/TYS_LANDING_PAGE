@@ -1,11 +1,12 @@
-import not_image from "@/images/empresa/not-image.webp";
 import { BannerItem } from "@/components";
 import { ThemedContainer, ThemedText } from "@/components_themed";
+import image_0002 from "@/images/empresa/0002.webp";
+import image_0008 from "@/images/empresa/0008.webp";
 
 const Banners = () => {
   return (
     <ThemedContainer element="section">
-      <BannerItem image={not_image} alt="img" backgroundColor="gray-light">
+      <BannerItem image={image_0008} alt="img" backgroundColor="gray-light">
         <ThemedText element="h2" fontSize="2xl" fontWeight="light">
           Un Legado de Excelencia
         </ThemedText>
@@ -18,7 +19,7 @@ const Banners = () => {
         </ThemedText>
       </BannerItem>
       <BannerItem
-        image={not_image}
+        image={image_0002}
         alt="img"
         backgroundColor="gray-light"
         invert
