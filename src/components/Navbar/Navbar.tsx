@@ -8,11 +8,19 @@ import Image from "next/image";
 import { MainRoutesModel, SystemsURLs } from "@/models";
 //logo
 import logo from "@/logos/logo_dark.svg";
+//icons
+import menu_burger from "@/icons/menu-burger.svg";
+import arrow_left from "@/icons/arrow-left.svg";
 //components
 import { ThemedContainer } from "@/components_themed";
+import { SvgIcon } from "../SvgIcon";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
+
+  const handleLinkClick = () => {
+    setShowMenu(false);
+  };
 
   return (
     <ThemedContainer element="header" className={classes.navbar}>
@@ -31,28 +39,61 @@ const Navbar = () => {
       </ThemedContainer>
       <ThemedContainer element="header" className={classes.navbar__container}>
         <Link href="/" className={classes.navbar__logo}>
-          <Image src={logo} alt="logo" width={65} />
+          <Image src={logo} alt="logo" width={55} />
         </Link>
-        <ThemedContainer element="div" className={classes.navbar__toggle_menu}>
-          Botton
-        </ThemedContainer>
-        <ThemedContainer element="div" className={classes.navbar__list}>
-          <Link href="/" className={classes.navbar__item}>
+        <SvgIcon
+          src={menu_burger}
+          alt="Abrir menu"
+          className={classes.navbar__toggle_menu}
+          onClick={() => setShowMenu(!showMenu)}
+        />
+        <ThemedContainer
+          element="div"
+          className={`${classes.navbar__list} ${
+            showMenu && classes["navbar__list--show"]
+          }`}
+        >
+          <ThemedContainer element="div" className={classes.navbar__close_menu}>
+            <SvgIcon
+              src={arrow_left}
+              alt="Cerrar menu"
+              width={30}
+              onClick={() => setShowMenu(false)}
+            />
+          </ThemedContainer>
+          <Link
+            href="/"
+            className={classes.navbar__item}
+            onClick={handleLinkClick}
+          >
             Inicio
           </Link>
           <Link
             href={MainRoutesModel.SERVICES}
             className={classes.navbar__item}
+            onClick={handleLinkClick}
           >
             Servicios
           </Link>
-          <Link href={MainRoutesModel.ABOUT} className={classes.navbar__item}>
+          <Link
+            href={MainRoutesModel.ABOUT}
+            className={classes.navbar__item}
+            onClick={handleLinkClick}
+          >
             ¿Quienes Somos?
           </Link>
-          <Link href={MainRoutesModel.HISTORY} className={classes.navbar__item}>
+          <Link
+            href={MainRoutesModel.HISTORY}
+            className={classes.navbar__item}
+            onClick={handleLinkClick}
+          >
             Historia
           </Link>
-          <Link href="/" className={classes.navbar__item}>
+          <Link
+            href="/"
+            className={classes.navbar__item}
+            onClick={handleLinkClick}
+          >
             Contacto
           </Link>
         </ThemedContainer>
