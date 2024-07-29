@@ -12,7 +12,7 @@ import logo from "@/logos/logo_dark.svg";
 import menu_burger from "@/icons/menu-burger.svg";
 import arrow_left from "@/icons/arrow-left.svg";
 //components
-import { ThemedContainer } from "@/components_themed";
+import { ThemedContainer, ThemedLink } from "@/components_themed";
 import { SvgIcon } from "../SvgIcon";
 
 const Navbar = () => {
@@ -29,13 +29,17 @@ const Navbar = () => {
         backgroundColor="primary-light"
         className={classes.ontop}
       >
-        <Link href={SystemsURLs.CLIENTES} target="_blank">
+        <ThemedLink href={SystemsURLs.CLIENTES} target="_blank" color="black">
           Clientes
-        </Link>
+        </ThemedLink>
         <div className={classes.ontop__divider}>|</div>
-        <Link href={SystemsURLs.PROVEEDORES} target="_blank">
+        <ThemedLink
+          href={SystemsURLs.PROVEEDORES}
+          target="_blank"
+          color="black"
+        >
           Proveedores
-        </Link>
+        </ThemedLink>
       </ThemedContainer>
       <ThemedContainer element="header" className={classes.navbar__container}>
         <Link href="/" className={classes.navbar__logo}>
