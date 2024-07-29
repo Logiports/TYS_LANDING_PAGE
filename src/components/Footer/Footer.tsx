@@ -8,7 +8,7 @@ import instagram_icon from "@/icons/instagram.svg";
 import facebook_icon from "@/icons/facebook.svg";
 import linkedin_icon from "@/icons/linkedin.svg";
 //models
-import { MainRoutesModel } from "@/models";
+import { MainRoutesModel, SystemsURLs } from "@/models";
 //components
 import { ThemedContainer, ThemedText, ThemedLink } from "@/components_themed";
 
@@ -65,7 +65,7 @@ const Footer = () => {
               </ThemedLink>
             </ThemedContainer>
             <ThemedContainer element="li">
-              <ThemedLink href="#">Proyectos</ThemedLink>
+              <ThemedLink href={MainRoutesModel.CONTACT}>Contacto</ThemedLink>
             </ThemedContainer>
           </ThemedContainer>
           <ThemedContainer element="ul">
@@ -75,10 +75,14 @@ const Footer = () => {
               </ThemedLink>
             </ThemedContainer>
             <ThemedContainer element="li">
-              <ThemedLink href={MainRoutesModel.CONTACT}>Contacto</ThemedLink>
+              <ThemedLink href={SystemsURLs.CLIENTES} target="_blank">
+                Clientes (web)
+              </ThemedLink>
             </ThemedContainer>
             <ThemedContainer element="li">
-              <ThemedLink href="#">Accesebilidad</ThemedLink>
+              <ThemedLink href={SystemsURLs.PROVEEDORES} target="_blank">
+                Proveedores (web)
+              </ThemedLink>
             </ThemedContainer>
           </ThemedContainer>
         </ThemedContainer>
