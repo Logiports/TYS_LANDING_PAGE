@@ -90,7 +90,7 @@ const Navbar = () => {
             Historia
           </Link>
           <Link
-            href="/"
+            href={MainRoutesModel.CONTACT}
             className={classes.navbar__item}
             onClick={handleLinkClick}
           >

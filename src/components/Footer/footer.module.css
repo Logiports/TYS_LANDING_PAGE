@@ -24,6 +24,15 @@
   display: flex;
   justify-content: center;
 }
+.footer__icons {
+  display: flex;
+}
+.footer__icon {
+  margin-right: 8px;
+}
+.footer__icon:hover {
+  opacity: 0.8;
+}
 @media (max-width: 1024px) {
   .footer {
     flex-direction: column;

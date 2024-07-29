@@ -1,8 +1,15 @@
 import classes from "./footer.module.css";
+//logo
 import Image from "next/image";
 import logo_dark from "@/logos/logo_dark.svg";
-
+//icons
+import { SvgIcon } from "../SvgIcon";
+import instagram_icon from "@/icons/instagram.svg";
+import facebook_icon from "@/icons/facebook.svg";
+import linkedin_icon from "@/icons/linkedin.svg";
+//models
 import { MainRoutesModel } from "@/models";
+//components
 import { ThemedContainer, ThemedText, ThemedLink } from "@/components_themed";
 
 const Footer = () => {
@@ -28,9 +35,24 @@ const Footer = () => {
               SERVICIOS S.A.
             </ThemedText>
           </ThemedContainer>
-          <ThemedText element="p" marginTop="sm">
+          <ThemedText element="p" marginTop="xs">
             lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do.
           </ThemedText>
+          <ThemedContainer
+            element="div"
+            marginTop="xs"
+            className={classes.footer_icons}
+          >
+            <ThemedLink href="#" className={classes.footer__icon}>
+              <SvgIcon src={instagram_icon} alt="Instagram" />
+            </ThemedLink>
+            <ThemedLink href="#" className={classes.footer__icon}>
+              <SvgIcon src={facebook_icon} alt="Facebook" />
+            </ThemedLink>
+            <ThemedLink href="#" className={classes.footer__icon}>
+              <SvgIcon src={linkedin_icon} alt="Linkedin" />
+            </ThemedLink>
+          </ThemedContainer>
         </ThemedContainer>
         <ThemedContainer element="div" className={classes.footer__grid}>
           <ThemedContainer element="ul">
@@ -53,7 +75,7 @@ const Footer = () => {
               </ThemedLink>
             </ThemedContainer>
             <ThemedContainer element="li">
-              <ThemedLink href="#">Contacto</ThemedLink>
+              <ThemedLink href={MainRoutesModel.CONTACT}>Contacto</ThemedLink>
             </ThemedContainer>
             <ThemedContainer element="li">
               <ThemedLink href="#">Accesebilidad</ThemedLink>

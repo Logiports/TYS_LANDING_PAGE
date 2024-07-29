@@ -1,0 +1,30 @@
+.social__banner {
+  display: flex;
+  align-items: flex-end;
+}
+.social__text {
+  margin-right: 32px;
+}
+.social__icons {
+  display: flex;
+}
+.social__link {
+  margin-right: 32px;
+}
+.social__link:hover {
+  opacity: 0.8;
+}
+.social__icon {
+  scale: 1.5;
+}
+@media (max-width: 800px) {
+  .social__banner {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .social__icons {
+    margin-top: 32px;
+    margin-left: 3px;
+  }
+}
